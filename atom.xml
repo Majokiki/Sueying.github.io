@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sueying.github.io/</id>
     <title>ajslpzcd</title>
-    <updated>2020-08-17T03:20:48.580Z</updated>
+    <updated>2020-08-17T03:24:17.890Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sueying.github.io/"/>
     <link rel="self" href="https://sueying.github.io/atom.xml"/>
@@ -36,13 +36,6 @@
         <link href="https://sueying.github.io/post/xin-ci-fa-xian/">
         </link>
         <updated>2020-08-14T03:43:38.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[蹚水]]></title>
-        <id>https://sueying.github.io/post/pythonpath_tangshui/</id>
-        <link href="https://sueying.github.io/post/pythonpath_tangshui/">
-        </link>
-        <updated>2020-08-12T08:58:10.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Pandas cheatsheet]]></title>
@@ -85,6 +78,17 @@
         <summary type="html"><![CDATA[<p>只需要贴一段css在正文中就可以，这段css代码会隐藏，不出现在显示效果中。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>只需要贴一段css在正文中就可以，这段css代码会隐藏，不出现在显示效果中。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Review Leetcode算法题]]></title>
+        <id>https://sueying.github.io/post/review-leetcode/</id>
+        <link href="https://sueying.github.io/post/review-leetcode/">
+        </link>
+        <updated>2020-05-18T15:58:53.000Z</updated>
+        <summary type="html"><![CDATA[<p>由于算法题通常会刷不止一遍，除了按专题整理算法题之外，我觉得还应该有一个表格来记录：题目描述，解题思路，以及刷题的记录。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>由于算法题通常会刷不止一遍，除了按专题整理算法题之外，我觉得还应该有一个表格来记录：题目描述，解题思路，以及刷题的记录。</p>
 ]]></content>
     </entry>
 </feed>
