@@ -2,13 +2,62 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sueying.github.io/</id>
     <title>ajslpzcd</title>
-    <updated>2020-08-07T01:45:14.829Z</updated>
+    <updated>2020-08-17T03:17:15.828Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sueying.github.io/"/>
     <link rel="self" href="https://sueying.github.io/atom.xml"/>
     <logo>https://sueying.github.io/images/avatar.png</logo>
     <icon>https://sueying.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, ajslpzcd</rights>
+    <entry>
+        <title type="html"><![CDATA[SNN-DPC 聚类算法]]></title>
+        <id>https://sueying.github.io/post/snn-dpc/</id>
+        <link href="https://sueying.github.io/post/snn-dpc/">
+        </link>
+        <updated>2020-08-14T09:51:31.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CheatSheet系列]]></title>
+        <id>https://sueying.github.io/post/cheatsheets/</id>
+        <link href="https://sueying.github.io/post/cheatsheets/">
+        </link>
+        <updated>2020-08-14T09:47:12.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ACM中哪些算法是应该敲的滚瓜烂熟的？]]></title>
+        <id>https://sueying.github.io/post/acm-zhong-na-xie-suan-fa-shi-ying-gai-qiao-de-gun-gua-lan-shou-de/</id>
+        <link href="https://sueying.github.io/post/acm-zhong-na-xie-suan-fa-shi-ying-gai-qiao-de-gun-gua-lan-shou-de/">
+        </link>
+        <updated>2020-08-14T04:23:08.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[新词发现]]></title>
+        <id>https://sueying.github.io/post/xin-ci-fa-xian/</id>
+        <link href="https://sueying.github.io/post/xin-ci-fa-xian/">
+        </link>
+        <updated>2020-08-14T03:43:38.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[蹚水]]></title>
+        <id>https://sueying.github.io/post/pythonpath_tangshui/</id>
+        <link href="https://sueying.github.io/post/pythonpath_tangshui/">
+        </link>
+        <updated>2020-08-12T08:58:10.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pandas cheatsheet]]></title>
+        <id>https://sueying.github.io/post/pandas-cheatsheet/</id>
+        <link href="https://sueying.github.io/post/pandas-cheatsheet/">
+        </link>
+        <updated>2020-08-09T12:55:38.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[小工具]]></title>
+        <id>https://sueying.github.io/post/easy-tools/</id>
+        <link href="https://sueying.github.io/post/easy-tools/">
+        </link>
+        <updated>2020-08-09T02:17:44.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[mac test]]></title>
         <id>https://sueying.github.io/post/mac_test/</id>
@@ -36,79 +85,6 @@
         <summary type="html"><![CDATA[<p>只需要贴一段css在正文中就可以，这段css代码会隐藏，不出现在显示效果中。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>只需要贴一段css在正文中就可以，这段css代码会隐藏，不出现在显示效果中。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Review Leetcode算法题]]></title>
-        <id>https://sueying.github.io/post/review-leetcode/</id>
-        <link href="https://sueying.github.io/post/review-leetcode/">
-        </link>
-        <updated>2020-05-18T15:58:53.000Z</updated>
-        <summary type="html"><![CDATA[<p>由于算法题通常会刷不止一遍，除了按专题整理算法题之外，我觉得还应该有一个表格来记录：题目描述，解题思路，以及刷题的记录。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>由于算法题通常会刷不止一遍，除了按专题整理算法题之外，我觉得还应该有一个表格来记录：题目描述，解题思路，以及刷题的记录。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[MySQL cheatsheet]]></title>
-        <id>https://sueying.github.io/post/mysql-cheatsheet/</id>
-        <link href="https://sueying.github.io/post/mysql-cheatsheet/">
-        </link>
-        <updated>2020-05-12T08:53:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>一些 MySQL基本操作，帮助回忆MySQL语法</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>一些 MySQL基本操作，帮助回忆MySQL语法</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[常用标点符号的英文名字]]></title>
-        <id>https://sueying.github.io/post/punctuation_mark/</id>
-        <link href="https://sueying.github.io/post/punctuation_mark/">
-        </link>
-        <updated>2020-05-12T08:22:45.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[DL入门，除了看书，还有题目]]></title>
-        <id>https://sueying.github.io/post/dl-ru-men-chu-liao-kan-shu-huan-you-ti-mu/</id>
-        <link href="https://sueying.github.io/post/dl-ru-men-chu-liao-kan-shu-huan-you-ti-mu/">
-        </link>
-        <updated>2020-05-06T08:41:01.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[我选择的机器学习/深度学习系统课程]]></title>
-        <id>https://sueying.github.io/post/ML_DL courses/</id>
-        <link href="https://sueying.github.io/post/ML_DL courses/">
-        </link>
-        <updated>2020-05-05T12:36:52.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Yoon Kim: Convolutional Neural Networks for Sentence Classification, 2014.]]></title>
-        <id>https://sueying.github.io/post/yoon-kim-convolutional-neural-networks-for-sentence-classification-2014/</id>
-        <link href="https://sueying.github.io/post/yoon-kim-convolutional-neural-networks-for-sentence-classification-2014/">
-        </link>
-        <updated>2020-04-01T09:27:29.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p><strong>基于预训word2vec，使用CNN做短文本分类。</strong></p>
-<p>这篇paper在语句分类方面很有名，模型简单效果好。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p><strong>基于预训word2vec，使用CNN做短文本分类。</strong></p>
-<p>这篇paper在语句分类方面很有名，模型简单效果好。</p>
-</blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://sueying.github.io/post/hello-gridea/</id>
-        <link href="https://sueying.github.io/post/hello-gridea/">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
 ]]></content>
     </entry>
 </feed>
