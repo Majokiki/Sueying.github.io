@@ -2,13 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sueying.github.io/</id>
     <title>ajslpzcd</title>
-    <updated>2020-08-17T03:24:49.567Z</updated>
+    <updated>2020-08-19T05:48:44.689Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sueying.github.io/"/>
     <link rel="self" href="https://sueying.github.io/atom.xml"/>
     <logo>https://sueying.github.io/images/avatar.png</logo>
     <icon>https://sueying.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, ajslpzcd</rights>
+    <entry>
+        <title type="html"><![CDATA[python Mysql 基础使用]]></title>
+        <id>https://sueying.github.io/post/python-mysql/</id>
+        <link href="https://sueying.github.io/post/python-mysql/">
+        </link>
+        <updated>2020-08-19T03:47:54.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[SNN-DPC 聚类算法]]></title>
         <id>https://sueying.github.io/post/snn-dpc/</id>
@@ -78,17 +85,6 @@
         <summary type="html"><![CDATA[<p>只需要贴一段css在正文中就可以，这段css代码会隐藏，不出现在显示效果中。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>只需要贴一段css在正文中就可以，这段css代码会隐藏，不出现在显示效果中。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Review Leetcode算法题]]></title>
-        <id>https://sueying.github.io/post/review-leetcode/</id>
-        <link href="https://sueying.github.io/post/review-leetcode/">
-        </link>
-        <updated>2020-05-18T15:58:53.000Z</updated>
-        <summary type="html"><![CDATA[<p>由于算法题通常会刷不止一遍，除了按专题整理算法题之外，我觉得还应该有一个表格来记录：题目描述，解题思路，以及刷题的记录。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>由于算法题通常会刷不止一遍，除了按专题整理算法题之外，我觉得还应该有一个表格来记录：题目描述，解题思路，以及刷题的记录。</p>
 ]]></content>
     </entry>
 </feed>

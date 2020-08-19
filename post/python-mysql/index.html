@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>我选择的机器学习/深度学习系统课程 | ajslpzcd</title>
+<title>python Mysql 基础使用 | ajslpzcd</title>
 
 <link rel="shortcut icon" href="https://sueying.github.io//favicon.ico?v=1597815935520">
 
@@ -89,64 +89,103 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    我选择的机器学习/深度学习系统课程
+                    python Mysql 基础使用
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2020-05-05 ·
+                        · 2020-08-19 ·
                     </time>
-                    
-                        <a href="https://sueying.github.io/tag/BGZGnOfaHn/" class="post-tags">
-                            # Machine Learning
-                        </a>
-                    
-                        <a href="https://sueying.github.io/tag/eKKnPosPb2/" class="post-tags">
-                            # Deep Learning
-                        </a>
                     
                 </div>
                 <div class="post-content">
-                    <h3 id="机器学习">💡机器学习</h3>
-<ol>
-<li>《机器学习基石》/《机器学习技法》--林轩田</li>
-</ol>
-<ul>
-<li>coursera 课程 ：包含视频和作业</li>
-<li>教材： Learning from Data，不长，值得看</li>
-<li><a href="https://www.csie.ntu.edu.tw/~htlin/course/mlfound17fall/">2017秋 slides and assignment</a></li>
-</ul>
-<ol start="2">
-<li>《统计学习方法》--李航</li>
-</ol>
-<ul>
-<li><a href="https://github.com/cpejlgc/li_hang">《统计学习方法》PPT</a></li>
-<li><a href="https://github.com/Dod-o/Statistical-Learning-Method_Code">手写实现《统计学习方法》书中全部代码</a></li>
-</ul>
-<h3 id="深度学习">💡深度学习</h3>
-<ol>
-<li>
-<p>动手学深度学习--李沐<br>
-<a href="https://zh.gluon.ai/index.html">电子书、练习</a><br>
-<a href="https://github.com/ShusenTang/Dive-into-DL-PyTorch">Pytroch版</a></p>
-</li>
-<li>
-<p>《神经网络与深度学习》-- 邱锡鹏：邱老师写的教材</p>
-</li>
-</ol>
-<ul>
-<li><a href="https://nndl.github.io/">PPT、电子书、有课后练习</a></li>
-<li>新加入邱实验室的同学要做的<a href="https://github.com/FudanNLP/nlp-beginner">自然语言处理入门练习</a></li>
-<li>练习参考<a href="https://github.com/Alic-yuan/nlp-beginner-finish">代码</a></li>
-</ul>
-<h3 id="nlp">💡NLP</h3>
-<p><a href="https://www.fast.ai/2019/07/08/fastai-nlp/">Fast.ai course : A Code-First Introduction to Natural Language Processing</a><br>
-michael collins，NLP课程<br>
-<a href="https://github.com/huggingface/transformers">Huggingface Transformers</a></p>
+                    <h2 id="1-创建数据库">1. 创建数据库</h2>
+<pre><code class="language-python">import mysql.connector
+
+mydb = mysql.connector.connect(
+    host=&quot;localhost&quot;,
+    user=&quot;yourusername&quot;,
+    passwd=&quot;yourpassword&quot;
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute(&quot;CREATE DATABASE mydatabase&quot;)
+
+mycursor.execute(&quot;SHOW DATABASES&quot;)
+for x in mycursor:print(x)
+</code></pre>
+<h2 id="2-创建表查看表删除表">2. 创建表，查看表，删除表</h2>
+<pre><code class="language-python">#先连接创建好的数据库
+mydb = mysql.connector.connect(
+    host=&quot;localhost&quot;,
+    user=&quot;yourusername&quot;,
+    passwd=&quot;yourpassword&quot;,
+    database=&quot;mydatabase&quot;
+)
+
+mycursor = mydb.cursor()
+# 建立顾客表，主键是自增的整型id，其他列是：不定长字符串name，不定长字符串address
+mycursor.execute(&quot;CREATE TABLE customers (name VARCHAR(255), address VARCHAR(255))&quot;)
+
+mycursor.execute(&quot;ALTER TABLE customers ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY&quot;)
+
+# 建立消费记录表，主键是唯一且随机的编码visitNo，result列保存json格式的记录
+mycursor.execute(&quot;CREATE TABLE records (visitNo VARCHAR(32) PRIMARY KEY, result TEXT）&quot;)
+
+mycursor.execute(&quot;SHOW TABLES&quot;)
+for x in mycursor:print(x)
+
+mycursor.execute(&quot;DROP TABLE IF EXISTS customers&quot;）
+</code></pre>
+<h2 id="3-插入数据查找数据删除数据更新数据">3. 插入数据，查找数据，删除数据，更新数据</h2>
+<pre><code class="language-python">mycursor.execute(&quot;INSERT INTO customers (name, address) VALUES (%s, %s)&quot; % (&quot;John&quot;, &quot;Highway 21&quot;))
+
+mycursor.execute(&quot;SELECT * FROM customers WHERE address ='Park Lane 38'&quot;）
+myresult = mycursor.fetchall()
+for x in myresult : print(x)
+
+mycursor.execute(&quot;SELECT * FROM customers WHERE address LIKE '%way%'&quot;）
+myresult = mycursor.fetchall()
+for x in myresult : print(x)
+
+mycursor.execute(&quot;SELECT * FROM customers ORDER BY name DESC&quot;)
+myresult = mycursor.fetchall()
+for x in myresult : print(x)
+
+
+mycursor.execute( &quot;DELETE FROM customers WHERE address = 'Mountain 21'&quot;
+)
+mydb.commit()
+print(mycursor.rowcount, &quot;record(s) deleted&quot;)
+
+mycursor.execute(&quot;UPDATE customers SET address = 'Canyon 123' WHERE address = 'Valley 345'&quot;)
+mydb.commit()
+print(mycursor.rowcount, &quot;record(s) affected&quot;)
+</code></pre>
+<h3 id="特别地插入json格式数据时">特别地，插入json格式数据时：</h3>
+<pre><code class="language-python"># type(tmp) = &lt;class 'dict'&gt;
+# result = json.dumps(tmp) # result格式为json str
+# 若result中含有Unicode中文字符，需要转义json数据：result.replace('\\u','\\\\u')
+
+# mycursor.execute(&quot;select left(uuid(),8)&quot;)
+# for x in mycursor : visitNo = str(x[0]) # uuid截取后8位作为唯一且随机的编码visitNo
+mycursor.execute(&quot;insert into records (visitNo, result) values ('%s', '%s')&quot; % (visitNo, result))
+
+# 查找记录
+cursor.execute(&quot;select result from records where visitNo = '%s'&quot; % (visitNo))
+</code></pre>
 
                 </div>
             </article>
         </div>
 
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://sueying.github.io/post/snn-dpc/" class="post-title gt-a-link">
+                    SNN-DPC 聚类算法
+                </a>
+            </div>
         
 
         
