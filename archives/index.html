@@ -1,333 +1,307 @@
 <html>
+
 <head>
-    <meta charset="utf-8"/>
-<meta name="description" content=""/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-<title>ajslpzcd</title>
-
-<link rel="shortcut icon" href="https://sueying.github.io//favicon.ico?v=1597815935520">
-
-<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    ajslpzcd
+</title>
+<link rel="shortcut icon" href="https://sueying.github.io//favicon.ico?v=1598164496074">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://sueying.github.io//styles/main.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
-
-<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
-<!-- DEMO JS -->
-<!--<script src="media/scripts/index.js"></script>-->
-
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://sueying.github.io//media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
 </head>
+
 <body>
-<div class="main gt-bg-theme-color-first">
-    <div class="main-content">
-        <nav class="navbar navbar-expand-lg">
-    <div class="navbar-brand">
-        <img class="user-avatar" src="/images/avatar.png" alt="头像">
-        <div class="site-name gt-c-content-color-first">
-            ajslpzcd
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://sueying.github.io/">
+                <img class="avatar" src="https://sueying.github.io//images/avatar.png?v=1598164496074" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    ajslpzcd
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
         </div>
     </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav mr-auto" style="text-align: center">
-            
-                <div class="nav-item">
-                    
-                        <a href="/" class="menu gt-a-link">
-                            首页
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/archives" class="menu gt-a-link">
-                            归档
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/tags" class="menu gt-a-link">
-                            标签
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/post/about" class="menu gt-a-link">
-                            关于
-                        </a>
-                    
-                </div>
-            
-        </div>
-        <div style="text-align: center">
-            <form id="gridea-search-form" style="position: relative" data-update="1597815935520" action="/search/index.html">
-                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
-                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
-            </form>
-        </div>
-    </div>
-</nav>
-
-        <div class="post-container">
-            <div class="post-detail gt-bg-theme-color-first">
-                <article class="gt-post-content">
-                    <h2 class="post-title">归档</h2>
-        
-
-<div class="archives-container">
-    
-        <h2 class="year gt-c-cotent-color-first">2020</h2>
-        
-            
-                <article class="post">
-                    <a href="https://sueying.github.io/post/python-mysql/">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2020-08-19&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            python Mysql 基础使用
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://sueying.github.io/post/snn-dpc/">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2020-08-14&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            SNN-DPC 聚类算法
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://sueying.github.io/post/cheatsheets/">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2020-08-14&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            CheatSheet系列
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://sueying.github.io/post/acm-zhong-na-xie-suan-fa-shi-ying-gai-qiao-de-gun-gua-lan-shou-de/">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2020-08-14&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            ACM中哪些算法是应该敲的滚瓜烂熟的？
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://sueying.github.io/post/xin-ci-fa-xian/">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2020-08-14&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            新词发现
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://sueying.github.io/post/pandas-cheatsheet/">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2020-08-09&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            Pandas cheatsheet
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://sueying.github.io/post/easy-tools/">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2020-08-09&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            小工具
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://sueying.github.io/post/mac_test/">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2020-08-05&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            mac test
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://sueying.github.io/post/easy-bert-maskLM/">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2020-05-29&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            五分钟实现一个中文版的Bert Masked LM
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://sueying.github.io/post/edit-markdown-table-style/">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2020-05-19&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            MarkDown表格格式编辑
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://sueying.github.io/post/review-leetcode/">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2020-05-18&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            Review Leetcode算法题
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://sueying.github.io/post/mysql-cheatsheet/">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2020-05-12&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            MySQL cheatsheet
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://sueying.github.io/post/punctuation_mark/">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2020-05-12&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            常用标点符号的英文名字
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-                <article class="post">
-                    <a href="https://sueying.github.io/post/yoon-kim-convolutional-neural-networks-for-sentence-classification-2014/">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2020-04-01&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            Yoon Kim: Convolutional Neural Networks for Sentence Classification, 2014.
-                        </div>
-                    </a>
-                </article>
-            
-        
-            
-        
-    
-        <h2 class="year gt-c-cotent-color-first">2018</h2>
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-                <article class="post">
-                    <a href="https://sueying.github.io/post/hello-gridea/">
-                        <div class="post-title gt-c-content-color-first">
-                            <small><b>2018-12-12&nbsp;&nbsp;·&nbsp;&nbsp;</b></small>
-                            Hello Gridea
-                        </div>
-                    </a>
-                </article>
-            
-        
-    
 </div>
 
-        <div class="pagination-container">
-    
-    
-</div>
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
 
-    </article>
-</div>
-</div>
-        <div class="site-footer gt-c-content-color-first">
-    <div class="slogan gt-c-content-color-first"></div>
-    <div class="social-container">
-        
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
             
-        
+
+    <div class="archives-container main-container">
+        <ul class="timeline">
             
-        
-            
-        
-            
-        
-            
-        
-            
-        
+                <li>
+                    <h3 class="year">
+                        2020
+                    </h3>
+                    <ul class="year-wrapper">
+                        
+                            
+                                <li>
+                                    <span class="date">2020-08-21</span>
+                                    <a class="title" href="https://sueying.github.io/post/python-collections/">
+                                        <span>python容器</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2020-08-19</span>
+                                    <a class="title" href="https://sueying.github.io/post/python-mysql/">
+                                        <span>python Mysql 基础使用</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2020-08-14</span>
+                                    <a class="title" href="https://sueying.github.io/post/snn-dpc/">
+                                        <span>SNN-DPC 聚类算法</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2020-08-14</span>
+                                    <a class="title" href="https://sueying.github.io/post/cheatsheets/">
+                                        <span>CheatSheet系列</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2020-08-14</span>
+                                    <a class="title" href="https://sueying.github.io/post/acm-zhong-na-xie-suan-fa-shi-ying-gai-qiao-de-gun-gua-lan-shou-de/">
+                                        <span>ACM中哪些算法是应该敲的滚瓜烂熟的？</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2020-08-14</span>
+                                    <a class="title" href="https://sueying.github.io/post/xin-ci-fa-xian/">
+                                        <span>新词发现</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2020-08-09</span>
+                                    <a class="title" href="https://sueying.github.io/post/pandas-cheatsheet/">
+                                        <span>Pandas cheatsheet</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2020-08-09</span>
+                                    <a class="title" href="https://sueying.github.io/post/easy-tools/">
+                                        <span>小工具</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2020-08-05</span>
+                                    <a class="title" href="https://sueying.github.io/post/mac_test/">
+                                        <span>mac test</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2020-05-29</span>
+                                    <a class="title" href="https://sueying.github.io/post/easy-bert-maskLM/">
+                                        <span>五分钟实现一个中文版的Bert Masked LM</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2020-05-19</span>
+                                    <a class="title" href="https://sueying.github.io/post/edit-markdown-table-style/">
+                                        <span>MarkDown表格格式编辑</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2020-05-18</span>
+                                    <a class="title" href="https://sueying.github.io/post/review-leetcode/">
+                                        <span>Review Leetcode算法题</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2020-05-12</span>
+                                    <a class="title" href="https://sueying.github.io/post/mysql-cheatsheet/">
+                                        <span>MySQL cheatsheet</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2020-05-12</span>
+                                    <a class="title" href="https://sueying.github.io/post/punctuation_mark/">
+                                        <span>常用标点符号的英文名字</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2020-04-01</span>
+                                    <a class="title" href="https://sueying.github.io/post/yoon-kim-convolutional-neural-networks-for-sentence-classification-2014/">
+                                        <span>Yoon Kim: Convolutional Neural Networks for Sentence Classification, 2014.</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                    
+                    </ul>
+
+                </li>
+                
+                <li>
+                    <h3 class="year">
+                        2018
+                    </h3>
+                    <ul class="year-wrapper">
+                        
+                            
+                                    
+                            
+                                    
+                            
+                                    
+                            
+                                    
+                            
+                                    
+                            
+                                    
+                            
+                                    
+                            
+                                    
+                            
+                                    
+                            
+                                    
+                            
+                                    
+                            
+                                    
+                            
+                                    
+                            
+                                    
+                            
+                                    
+                            
+                                <li>
+                                    <span class="date">2018-12-12</span>
+                                    <a class="title" href="https://sueying.github.io/post/hello-gridea/">
+                                        <span>Hello Gridea</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                    </ul>
+
+                </li>
+                
+        </ul>
     </div>
-    <div class="footer-info">
-        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-    </div>
-    <div>
-        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
-                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://sueying.github.io//atom.xml" target="_blank">RSS</a></a>
-    </div>
+
+                
+
+                    <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://sueying.github.io//atom.xml" target="_blank">RSS</a>
 </div>
 
 <script>
@@ -335,6 +309,6 @@
 </script>
 
     </div>
-</div>
 </body>
+
 </html>

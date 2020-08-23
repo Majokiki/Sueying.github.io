@@ -1,476 +1,1046 @@
 <html>
+
 <head>
-    <meta charset="utf-8"/>
-<meta name="description" content=""/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-<title>ajslpzcd</title>
-
-<link rel="shortcut icon" href="https://sueying.github.io//favicon.ico?v=1597815935520">
-
-<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    ajslpzcd
+</title>
+<link rel="shortcut icon" href="https://sueying.github.io//favicon.ico?v=1598164496074">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://sueying.github.io//styles/main.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
-
-<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
-<!-- DEMO JS -->
-<!--<script src="media/scripts/index.js"></script>-->
-
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://sueying.github.io//media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
 </head>
+
 <body>
-<div class="main gt-bg-theme-color-first">
-    <div class="main-content">
-        <nav class="navbar navbar-expand-lg">
-    <div class="navbar-brand">
-        <img class="user-avatar" src="/images/avatar.png" alt="头像">
-        <div class="site-name gt-c-content-color-first">
-            ajslpzcd
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://sueying.github.io/">
+                <img class="avatar" src="https://sueying.github.io//images/avatar.png?v=1598164496074" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    ajslpzcd
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
         </div>
     </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav mr-auto" style="text-align: center">
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://sueying.github.io/post/cheatsheets/">
+                        CheatSheet系列
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-08-14</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            许多细碎的东西不容易记住，但可以放进我们的cache里。这个系列是常用工具的CheatSheet，只包含各个工具最主要的功能。持续更新中...
+
+Pandas Cheet Sheet
+
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://sueying.github.io/post/cheatsheets/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
             
-                <div class="nav-item">
-                    
-                        <a href="/" class="menu gt-a-link">
-                            首页
-                        </a>
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://sueying.github.io/post/acm-zhong-na-xie-suan-fa-shi-ying-gai-qiao-de-gun-gua-lan-shou-de/">
+                        ACM中哪些算法是应该敲的滚瓜烂熟的？
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-08-14</time>
                     
                 </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            ACM中哪些算法是应该敲的滚瓜烂熟的？ - 蔡少斐的回答 - 知乎
+https://www.zhihu.com/question/68701377/answer/268045983
+数据结构
+
+线段树（维护区间操作）
+二叉搜索树
+树状数组（维护前缀操作，某些情况下变体也可以维护区间）
+单调栈（在需要栈性质的前提下维护单调序列）
+单调队列（维护单调序列，常用于动态规划的优化、斜率优化等等）
+并查集（判断连通性，传递逻辑关系）
+带权并查集（常用于节点之间有可用权值表示的逻辑关系问题的求解）
+哈希表（手写的好处是方便自己实现对任何形式的数据哈希映射）
+trie树（涉及到二进制数相关问题，还是AC自动机的基础）
+treap平衡树（维护有序序列，对其进行二分查找，求k大，求前驱后继等操作）
+伸展树（维护区间，支持对区间的反转，区间插入等操作，还可以当作平衡树使用）。
+
+图的存储方法
+
+邻接表（链式前向星，vector）
+邻接矩阵。
+
+背包问题
+
+01背包
+完全背包
+多重背包
+分组背包
+树上分组背包。
+
+动态规划
+
+线性动态规划
+区间动态规划
+树上动态规划
+图上动态规划
+期望动态规划
+概率动态规划
+数位动态规划
+状态压缩动态规划。
+
+动态规划优化
+
+利用常见数据结构（单调栈、单调队列、线段树、ST表等等）
+四边形优化（对于满足四边形不等式的转移方程形式）
+斜率优化（对于满足一次函数的转移方程）
+FFT优化（对于满足卷积形式的转移方程）
+CDQ分治优化。
+
+排序方法
+
+堆排序
+快速排序
+归并排序
+插入排序
+选择排序
+冒泡排序
+计数排序
+基数排序（后缀数组的基础，重要）。
+
+基本技巧
+
+枚举子集
+莫队离线
+启发式合并。
+
+图论算法
+
+tarjan（求解强联通分量、双联通分量、割点、桥、以及环相关问题）
+dijkstra（求解单源最短路，优化特定形式动态规划问题）
+kruscal（最小生成树、最大生成树）
+spfa（单源最长/最短路，判定负环，费用流算法的基础，求解差分约束系统）
+floyd（求解多源最短路，解带限制的最短路问题，求最小环）
+拓扑排序（求解DAG上带限制的问题，解决动态规划状态依赖关系）
+欧拉路径（求解欧拉回路等，应用不多）
+匈牙利算法（二分图匹配）
+KM算法（最大权完美匹配）。
+
+字符串算法
+
+kmp（用于单模式串匹配任务，也可用于求字符串的周期）
+AC自动机（多模式串匹配有关的字符串任务，现多与动态规划及图论问题同时出现）
+manacher算法（用于求解回文串相关的题目）
+后缀数组（字符串子串排序有关）
+字符串哈希（极为常用的算法，用于判断字符串相等）。
+
+搜索算法
+
+bfs（求解最小步数问题）
+dfs（非常基本）
+迭代加深搜索（也是求解最小步数问题，具体可以使用迭代+dfs实现）
+A*（启发式搜索，加速搜索过程）
+双向广搜（起始状态与终止状态均一致，根号级别加速搜索）
+折半搜索（根号级别加速搜索）
+模拟退火（全局寻找最优解，用处非常广泛的算法）
+二分搜索（非常常用，二分答案问题)
+三分搜索（求解凸函数极值）
+
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://sueying.github.io/post/acm-zhong-na-xie-suan-fa-shi-ying-gai-qiao-de-gun-gua-lan-shou-de/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
             
-                <div class="nav-item">
-                    
-                        <a href="/archives" class="menu gt-a-link">
-                            归档
-                        </a>
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://sueying.github.io/post/python-collections/">
+                        python容器
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-08-21</time>
                     
                 </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            Generator
+使用了 yield 的函数被称为生成器（generator）。Generator 和 Iterator二者是可互换的两个概念
+def count(start, step):
+    while True:
+        yield start
+        start += step
+
+&amp;gt;&amp;gt;&amp;gt; counter = count(10, 2)
+&amp;gt;&amp;gt;&amp;gt; next(counter), next(counter), next(counter)
+(10, 12, 14)
+
+Iterator
+&amp;gt;&amp;gt;&amp;gt; list=[1,2,3,4]
+&amp;gt;&amp;gt;&amp;gt; it = iter(list)
+&amp;gt;&amp;gt;&amp;gt; next(it), next(it), next(it), next(it)
+(1, 2, 3, 4)
+
+&amp;lt;iter&amp;gt; = iter(&amp;lt;collection&amp;gt;)                 # `iter(&amp;lt;iter&amp;gt;)` returns unmodified iterator.
+&amp;lt;el&amp;gt;   = next(&amp;lt;iter&amp;gt; [, default])           # Raises StopIteration or returns &#39;default&#39; on end.
+&amp;lt;iter&amp;gt; = iter(&amp;lt;function&amp;gt;, to_exclusive)     # A sequence of return values until &#39;to_exclusive&#39;.
+&amp;lt;list&amp;gt; = list(&amp;lt;iter&amp;gt;)                       # Returns a list of iterator&#39;s remaining elements.
+
+Dictionary
+索引
+&amp;lt;view&amp;gt; = &amp;lt;dict&amp;gt;.keys()                          # List keys of dict
+&amp;lt;view&amp;gt; = &amp;lt;dict&amp;gt;.values()                        # List values of dict
+&amp;lt;view&amp;gt; = &amp;lt;dict&amp;gt;.items()                         # Key-value tuples of dict
+
+新建
+&amp;lt;dict&amp;gt; = collections.defaultdict(lambda: 1)     # Creates a dict with default value 1.
+&amp;lt;dict&amp;gt; = dict(&amp;lt;collection&amp;gt;)                     # Creates a dict from coll. of key-value pairs.
+&amp;lt;dict&amp;gt; = dict(zip(keys, values))                # Creates a dict from two collections.
+&amp;lt;dict&amp;gt; = dict.fromkeys(keys [, value])          # Creates a dict from collection of keys.
+
+元素操作
+&amp;lt;dict&amp;gt;.update(&amp;lt;dict&amp;gt;)                           # Adds items. Replaces ones with matching keys.
+value = &amp;lt;dict&amp;gt;.pop(key)                         # Removes item or raises KeyError.
+{k for k, v in &amp;lt;dict&amp;gt;.items() if v == value}    # Returns set of keys that point to the value.
+{k: v for k, v in &amp;lt;dict&amp;gt;.items() if k in keys}  # Returns a dictionary, filtered by keys.
+
+计数器
+&amp;gt;&amp;gt;&amp;gt; from collections import Counter
+&amp;gt;&amp;gt;&amp;gt; colors = [&#39;blue&#39;, &#39;blue&#39;, &#39;blue&#39;, &#39;red&#39;, &#39;red&#39;]
+&amp;gt;&amp;gt;&amp;gt; counter = Counter(colors)
+&amp;gt;&amp;gt;&amp;gt; counter[&#39;yellow&#39;] += 1
+Counter({&#39;blue&#39;: 3, &#39;red&#39;: 2, &#39;yellow&#39;: 1})
+&amp;gt;&amp;gt;&amp;gt; counter.most_common()[0]
+(&#39;blue&#39;, 3)
+
+List
+新建
+&amp;lt;list&amp;gt; = &amp;lt;list&amp;gt;[from_inclusive : to_exclusive : ±step_size]
+list_of_chars    = list(&amp;lt;str&amp;gt;)
+
+添加元素
+&amp;lt;list&amp;gt;.append(&amp;lt;el&amp;gt;)            # Or: &amp;lt;list&amp;gt; += [&amp;lt;el&amp;gt;]
+&amp;lt;list&amp;gt;.extend(&amp;lt;collection&amp;gt;)    # Or: &amp;lt;list&amp;gt; += &amp;lt;collection&amp;gt;
+
+排序
+&amp;lt;list&amp;gt;.sort()
+&amp;lt;list&amp;gt;.reverse()
+&amp;lt;list&amp;gt; = sorted(&amp;lt;collection&amp;gt;)
+&amp;lt;iter&amp;gt; = reversed(&amp;lt;list&amp;gt;)
+
+元素操作
+&amp;lt;int&amp;gt; = &amp;lt;list&amp;gt;.count(&amp;lt;el&amp;gt;)     # Returns number of occurrences. Also works on strings.
+index = &amp;lt;list&amp;gt;.index(&amp;lt;el&amp;gt;)     # Returns index of first occurrence or raises ValueError.
+&amp;lt;list&amp;gt;.insert(index, &amp;lt;el&amp;gt;)     # Inserts item at index and moves the rest to the right.
+&amp;lt;el&amp;gt; = &amp;lt;list&amp;gt;.pop([index])     # Removes and returns item at index or from the end.
+&amp;lt;list&amp;gt;.remove(&amp;lt;el&amp;gt;)            # Removes first occurrence of item or raises ValueError.
+&amp;lt;list&amp;gt;.clear()                 # Removes all items. Also works on dictionary and set.
+
+进阶
+sum_of_elements  = sum(&amp;lt;collection&amp;gt;)
+elementwise_sum  = [sum(pair) for pair in zip(list_a, list_b)]
+sorted_by_second = sorted(&amp;lt;collection&amp;gt;, key=lambda el: el[1])
+sorted_by_both   = sorted(&amp;lt;collection&amp;gt;, key=lambda el: (el[1], el[0]))
+
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://sueying.github.io/post/python-collections/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
             
-                <div class="nav-item">
-                    
-                        <a href="/tags" class="menu gt-a-link">
-                            标签
-                        </a>
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://sueying.github.io/post/python-mysql/">
+                        python Mysql 基础使用
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-08-19</time>
                     
                 </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            1. 创建数据库
+import mysql.connector
+
+mydb = mysql.connector.connect(
+    host=&amp;quot;localhost&amp;quot;,
+    user=&amp;quot;yourusername&amp;quot;,
+    passwd=&amp;quot;yourpassword&amp;quot;
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute(&amp;quot;CREATE DATABASE mydatabase&amp;quot;)
+
+mycursor.execute(&amp;quot;SHOW DATABASES&amp;quot;)
+for x in mycursor:print(x)
+
+2. 创建表，查看表，删除表
+#先连接创建好的数据库
+mydb = mysql.connector.connect(
+    host=&amp;quot;localhost&amp;quot;,
+    user=&amp;quot;yourusername&amp;quot;,
+    passwd=&amp;quot;yourpassword&amp;quot;,
+    database=&amp;quot;mydatabase&amp;quot;
+)
+
+mycursor = mydb.cursor()
+# 建立顾客表，主键是自增的整型id，其他列是：不定长字符串name，不定长字符串address
+mycursor.execute(&amp;quot;CREATE TABLE customers (name VARCHAR(255), address VARCHAR(255))&amp;quot;)
+
+mycursor.execute(&amp;quot;ALTER TABLE customers ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY&amp;quot;)
+
+# 建立消费记录表，主键是唯一且随机的编码visitNo，result列保存json格式的记录
+mycursor.execute(&amp;quot;CREATE TABLE records (visitNo VARCHAR(32) PRIMARY KEY, result TEXT）&amp;quot;)
+
+mycursor.execute(&amp;quot;SHOW TABLES&amp;quot;)
+for x in mycursor:print(x)
+
+mycursor.execute(&amp;quot;DROP TABLE IF EXISTS customers&amp;quot;）
+
+3. 插入数据，查找数据，删除数据，更新数据
+mycursor.execute(&amp;quot;INSERT INTO customers (name, address) VALUES (%s, %s)&amp;quot; % (&amp;quot;John&amp;quot;, &amp;quot;Highway 21&amp;quot;))
+
+mycursor.execute(&amp;quot;SELECT * FROM customers WHERE address =&#39;Park Lane 38&#39;&amp;quot;）
+myresult = mycursor.fetchall()
+for x in myresult : print(x)
+
+mycursor.execute(&amp;quot;SELECT * FROM customers WHERE address LIKE &#39;%way%&#39;&amp;quot;）
+myresult = mycursor.fetchall()
+for x in myresult : print(x)
+
+mycursor.execute(&amp;quot;SELECT * FROM customers ORDER BY name DESC&amp;quot;)
+myresult = mycursor.fetchall()
+for x in myresult : print(x)
+
+
+mycursor.execute( &amp;quot;DELETE FROM customers WHERE address = &#39;Mountain 21&#39;&amp;quot;
+)
+mydb.commit()
+print(mycursor.rowcount, &amp;quot;record(s) deleted&amp;quot;)
+
+mycursor.execute(&amp;quot;UPDATE customers SET address = &#39;Canyon 123&#39; WHERE address = &#39;Valley 345&#39;&amp;quot;)
+mydb.commit()
+print(mycursor.rowcount, &amp;quot;record(s) affected&amp;quot;)
+
+特别地，插入json格式数据时：
+# type(tmp) = &amp;lt;class &#39;dict&#39;&amp;gt;
+# result = json.dumps(tmp) # result格式为json str
+# 若result中含有Unicode中文字符，需要转义json数据：result.replace(&#39;\\u&#39;,&#39;\\\\u&#39;)
+
+# mycursor.execute(&amp;quot;select left(uuid(),8)&amp;quot;)
+# for x in mycursor : visitNo = str(x[0]) # uuid截取后8位作为唯一且随机的编码visitNo
+mycursor.execute(&amp;quot;insert into records (visitNo, result) values (&#39;%s&#39;, &#39;%s&#39;)&amp;quot; % (visitNo, result))
+
+# 查找记录
+cursor.execute(&amp;quot;select result from records where visitNo = &#39;%s&#39;&amp;quot; % (visitNo))
+
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://sueying.github.io/post/python-mysql/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
             
-                <div class="nav-item">
-                    
-                        <a href="/post/about" class="menu gt-a-link">
-                            关于
-                        </a>
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://sueying.github.io/post/snn-dpc/">
+                        SNN-DPC 聚类算法
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-08-14</time>
                     
                 </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            DPC聚类算法
+2014年，Rodriguez等人在Science杂志发表了基于快速搜索和发现密度峰值的聚类算法（clustering by fast search and find of density peaks, DPC)。该算法可以自动地发现簇中心，然后将数据点分配到不同的簇中。
+该算法基于两个基本假设：1）簇中心（密度峰值点）的局部密度大于围绕它的邻居的局部密度；2）不同簇中心之间的距离相对较远。为了找到同时满足这两个条件的簇中心，该算法引入了局部密度的定义。
+1. 局部密度
+数据集dataset中的数据点 iii 具有局部密度性质ρi\rho_{i}ρi​
+基于截断距离的局部密度定义：ρi=∑i≠jχ(dij−dc),χ(x)={1,x&amp;lt;00,x≥0\rho_{i}=\sum_{i \neq j} \chi\left(d_{i j}-d_{c}\right), \chi(x)=\left\{\begin{array}{ll}1, &amp;amp; x&amp;lt;0 \\ 0, &amp;amp; x \geq 0\end{array}\right.ρi​=∑i​=j​χ(dij​−dc​),χ(x)={1,0,​x&amp;lt;0x≥0​
+基于核距离的局部密度定义：ρi=∑i≠jexp⁡[−(dijdc)2]\rho_{i}=\sum_{i \neq j} \exp \left[-\left(\frac{d_{i j}}{d_{c}}\right)^{2}\right]ρi​=∑i​=j​exp[−(dc​dij​​)2]
+其中：dijd_{i j}dij​是数据点 i 和 j 的欧几里得距离；
+dc&amp;gt;0d_{c}&amp;gt;0dc​&amp;gt;0，是自定义的截断距离。即局部区域的定义是以点 i 为圆心，dcd_{c}dc​为半径的圆形区域。
+这两种局部密度定义的主要区别是，二者分别是离散的和连续的。
+2. 到更高密度点的最近距离
+δi=min⁡j:ρj&amp;gt;ρi(dij)\delta_{i}=\min _{j: \rho_{j}&amp;gt;\rho_{i}}\left(d_{i j}\right)δi​=minj:ρj​&amp;gt;ρi​​(dij​)
+特殊地，对于局部密度峰值点iii，定义δi=max⁡i≠j(δj)\delta_{i}=\max _{i \neq j}\left(\delta_{j}\right)δi​=maxi​=j​(δj​)
+3. 决策值
+为了方便地选择簇中心，取ρ\rhoρ和δ\deltaδ的乘积作为决策值加以衡量。
+γi=ρi×δi\gamma_{i}=\rho_{i} \times \delta_{i}γi​=ρi​×δi​
+取决策值γ\gammaγ最大的点作为簇中心。
+DPC步骤
+
+计算任意两个数据点之间的距离Dn×n={dij}n×nD^{n \times n}=\left\{d_{i j}\right\}^{n \times n}Dn×n={dij​}n×n
+根据截断距离算出任意数据点 xix_{i}xi​ 的局部密度 ρi\rho_{i}ρi​
+对于任意数据点 xi,x_{i},xi​, 计算出 δi\delta_{i}δi​
+以 ρi\rho_{i}ρi​ 为橫轴，以 δi\delta_{i}δi​ 为纵轴，画出决策图
+利用决策图，将 ρi\rho_{i}ρi​ 和 δi\delta_{i}δi​ 都相对较高的点标记为簇中心; 将 ρi\rho_{i}ρi​ 相对较低但是 δi\delta_{i}δi​ 相对较高的点标记为噪声点
+将剩余点进行分配。分配时，将每个剩余点分配到它的最近邻且密度比其大的数据点所在的簇。
+
+SNN-DPC算法
+Rui.Liu等人发现，当两个簇的密度差异较大时（如经典的聚类数据集Jain），DPC算法选择的两个簇中心往往只位于密度较大簇上。通过改变局部密度的定义（基于共享k近邻点SNN（Shared Nearest Neighbors）的个数计算），来改进效果。
+定义Shared Nearest Neighbors
+对于数据集中的任意点 i 和 j ，Γ(i)\Gamma(i)Γ(i)是点 i 的 K个近邻点集合，Γ(j)\Gamma(j)Γ(j)是点 j 的 K个近邻点集合。
+点 i 和点 j 的共享近邻点：SNN(i,j)=Γ(i)∩Γ(j)SNN(i, j)=\Gamma(i) \cap \Gamma(j)SNN(i,j)=Γ(i)∩Γ(j)
+定义SNN Similarity
+sim⁡(i,j)={∣SNN(i,j)∣2∑p∈SNN(i,j)(dip+djp), if i,j∈SNN(i,j)0, otherwise \operatorname{sim}(i, j)=\left\{\begin{array}{cl}\frac{|S N N(i, j)|^{2}}{\sum_{p \in SNN(i, j)}\left(d_{ip}+d_{jp}\right)} , &amp;amp; \text { if } i, j \in SNN(i, j) \\ 0, &amp;amp; \text { otherwise }\end{array}\right.sim(i,j)={∑p∈SNN(i,j)​(dip​+djp​)∣SNN(i,j)∣2​,0,​ if i,j∈SNN(i,j) otherwise ​
+原式可化为∣SNN(i,j)∣×11∣SNN(i,j)∣∑p∈SNN(i,j)(dip+djp)|SNN(i, j)| \times \frac{1}{\frac{1}{|S N N(i, j)|} \sum_{p \in S N N(i, j)}\left(d_{i p}+d_{j p}\right)}∣SNN(i,j)∣×∣SNN(i,j)∣1​∑p∈SNN(i,j)​(dip​+djp​)1​， 其中：
+
+
+∣SNN⁡(i,j)∣|\operatorname{SNN}(i, j)|∣SNN(i,j)∣的物理含义是点 i 和点 j 共享近邻点的个数
+
+
+1∣SNN(i,j)∣∑p∈SNN(i,j)(dip+djp)\frac{1}{|S N N(i, j)|} \sum_{p \in S N N(i, j)}\left(d_{i p}+d_{j p}\right)∣SNN(i,j)∣1​∑p∈SNN(i,j)​(dip​+djp​)的物理含义是点 i 和点 j 到他们的所有共享近邻点的距离的平均值
+
+
+定义SNN局部密度
+定义点 i 为数据集中的任意一点，L(i)={x1,x2,…,xk}L(i)=\left\{x_{1}, x_{2}, \ldots, x_{k}\right\}L(i)={x1​,x2​,…,xk​}是与点 i 的SNN Similarity最高的 k 个点。
+SNN局部定义为：ρi=∑j∈L(i)sim⁡(i,j)\rho_{i}=\sum_{j \in L(i)} \operatorname{sim}(i, j)ρi​=∑j∈L(i)​sim(i,j)
+在这种定义下，局部密度不仅包含了距离信息，而且还通过许多SNN，包含了集群结构的信息
+定义到更高密度点的最近距离
+δi=min⁡j:ρj&amp;gt;ρi[dij(∑p∈Γ(i)dip+∑q∈Γ(j)djq)]\delta_{i}=\min _{j: \rho_{j}&amp;gt;\rho_{i}}\left[d_{i j}\left(\sum_{p \in \Gamma(i)} d_{i p}+\sum_{q \in \Gamma(j)} d_{j q}\right)\right]δi​=minj:ρj​&amp;gt;ρi​​[dij​(∑p∈Γ(i)​dip​+∑q∈Γ(j)​djq​)]，注意这里的dijd_{i j}dij​和(∑p∈Γ(i)dip+∑q∈Γ(j)djq)\left(\sum_{p \in \Gamma(i)} d_{i p}+\sum_{q \in \Gamma(j)} d_{j q}\right)(∑p∈Γ(i)​dip​+∑q∈Γ(j)​djq​)是相乘的关系，因为我们定义局部密度时，使用的距离定义有所改变。
+特别的，局部密度最大值点的δi=max⁡j∈(X−i)(δj)\delta_{i}=\max _{j \in(X-i)}\left(\delta_{j}\right)δi​=maxj∈(X−i)​(δj​)
+定义决策值
+类似的，决策值γi=ρi×δi\gamma_{i}=\rho_{i} \times \delta_{i}γi​=ρi​×δi​
+定义剩余点分配步骤中的绝对下属点和可能下属点
+假设点 A 已经被分配到某个簇 c 中，点 B 尚未被分配：
+若∣SNN(A,B)∣≥k/2|S N N(A, B)| \geq k / 2∣SNN(A,B)∣≥k/2，则称点 B 是簇 c 的绝对下属点，也就是说点 B 也一定会被分配到簇 c 中。
+若0&amp;lt;∣SNN(A,B)∣&amp;lt;k/20&amp;lt;|S N N(A, B)|&amp;lt;k / 20&amp;lt;∣SNN(A,B)∣&amp;lt;k/2，则称点 B 是簇 c 的可能下属点，点 B 可以是其他簇的下属点。
+在极端情况下，假设点 B 同时满足
+∣SNN(A1,B)∣=k/2|S N N(A_1, B)| = k / 2∣SNN(A1​,B)∣=k/2
+∣SNN(A2,B)∣=k/2|S N N(A_2, B)| = k / 2∣SNN(A2​,B)∣=k/2，可以暂时将 k 加一，使其成为奇数
+SNN-DPC步骤
+
+计算任意两个数据点之间的距离Dn×n={dij}n×nD^{n \times n}=\left\{d_{i j}\right\}^{n \times n}Dn×n={dij​}n×n
+根据定义计算任意数据点的 SNN Similarity
+算出任意数据点 xix_{i}xi​ 的局部密度 ρi\rho_{i}ρi​
+对于任意数据点 xi,x_{i},xi​, 计算出 δi\delta_{i}δi​
+以 ρi\rho_{i}ρi​ 为橫轴，以 δi\delta_{i}δi​ 为纵轴，画出决策图。或者以 iii 为橫轴，以 γi\gamma_{i}γi​ 为纵轴画出决策图
+利用决策图，将 ρi\rho_{i}ρi​ 和 δi\delta_{i}δi​ 都相对较高的点标记为簇中心; 或者将γi\gamma_{i}γi​较大的点作为簇中心
+将剩余点中的绝对下属点进行分配。
+将剩余点中的可能下属点进行分配。
+
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://sueying.github.io/post/snn-dpc/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
             
-        </div>
-        <div style="text-align: center">
-            <form id="gridea-search-form" style="position: relative" data-update="1597815935520" action="/search/index.html">
-                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
-                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
-            </form>
-        </div>
-    </div>
-</nav>
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://sueying.github.io/post/xin-ci-fa-xian/">
+                        新词发现
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-08-14</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            怎样才算一个词？
 
 
-        <div class="post-list-container">
-    <div class="post-inner">
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                            <span class="sticky-top-flag gt-bg-accent-color-first">置顶</span>
-                        
-                        <a href="https://sueying.github.io/post/cheatsheets/">
-                            <span class="post-title gt-c-content-color-first">CheatSheet系列</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-08-14 ·
-                        </time>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                            <span class="sticky-top-flag gt-bg-accent-color-first">置顶</span>
-                        
-                        <a href="https://sueying.github.io/post/acm-zhong-na-xie-suan-fa-shi-ying-gai-qiao-de-gun-gua-lan-shou-de/">
-                            <span class="post-title gt-c-content-color-first">ACM中哪些算法是应该敲的滚瓜烂熟的？</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-08-14 ·
-                        </time>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://sueying.github.io/post/python-mysql/">
-                            <span class="post-title gt-c-content-color-first">python Mysql 基础使用</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-08-19 ·
-                        </time>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://sueying.github.io/post/snn-dpc/">
-                            <span class="post-title gt-c-content-color-first">SNN-DPC 聚类算法</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-08-14 ·
-                        </time>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://sueying.github.io/post/xin-ci-fa-xian/">
-                            <span class="post-title gt-c-content-color-first">新词发现</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-08-14 ·
-                        </time>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://sueying.github.io/post/pandas-cheatsheet/">
-                            <span class="post-title gt-c-content-color-first">Pandas cheatsheet</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-08-09 ·
-                        </time>
-                        
-                            <a href="https://sueying.github.io/tag/T469JOR2K/" class="post-tag">
-                                # cheatsheet
-                            </a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://sueying.github.io/post/easy-tools/">
-                            <span class="post-title gt-c-content-color-first">小工具</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-08-09 ·
-                        </time>
-                        
-                            <a href="https://sueying.github.io/tag/j2Q-U5oXg/" class="post-tag">
-                                # efficiency
-                            </a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://sueying.github.io/post/mac_test/">
-                            <span class="post-title gt-c-content-color-first">mac test</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-08-05 ·
-                        </time>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://sueying.github.io/post/easy-bert-maskLM/">
-                            <span class="post-title gt-c-content-color-first">五分钟实现一个中文版的Bert Masked LM</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>试用一下超好用的HuggingFace Transformer，用它实现一个中文版的Bert Masked LM</p>
+term在文章中出现的次数够多
 
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-05-29 ·
-                        </time>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://sueying.github.io/post/edit-markdown-table-style/">
-                            <span class="post-title gt-c-content-color-first">MarkDown表格格式编辑</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>只需要贴一段css在正文中就可以，这段css代码会隐藏，不出现在显示效果中。</p>
 
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-05-19 ·
-                        </time>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://sueying.github.io/post/review-leetcode/">
-                            <span class="post-title gt-c-content-color-first">Review Leetcode算法题</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>由于算法题通常会刷不止一遍，除了按专题整理算法题之外，我觉得还应该有一个表格来记录：题目描述，解题思路，以及刷题的记录。</p>
+词语的内部凝聚程度要足够高
+以“知”、“乎” 这两个字来说，假设在 5000 万字的样本中, “知” 出现了 150 万次， “乎” 出现了 4 万次。那 “知” 出现的概率为 0.03, “乎” 出现的概率为 0.0008。如果两个字符出现是个独立事件的话，”知”、“乎” 一起出现的期望概率是 0.03 * 0.0008 = 2.4e-05. 如果实际上 “知乎” 出现了 3 万次, 则实际上”知”、“乎” 一起出现的概率是 6e-03, 是期望概率的 250 倍。也就是说两个字越相关，点间互信息越大。
+可以用点间互信息衡量词语凝固度：
 
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-05-18 ·
-                        </time>
-                        
-                            <a href="https://sueying.github.io/tag/_m6zU58ww/" class="post-tag">
-                                # leetcode
-                            </a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://sueying.github.io/post/mysql-cheatsheet/">
-                            <span class="post-title gt-c-content-color-first">MySQL cheatsheet</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>一些 MySQL基本操作，帮助回忆MySQL语法</p>
 
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-05-12 ·
-                        </time>
-                        
-                    </div>
+PMI=p(x,y)log⁡2p(x,y)p(x)p(y)P M I=p(x, y) \log _{2} \frac{p(x, y)}{p(x) p(y)}
+PMI=p(x,y)log2​p(x)p(y)p(x,y)​
+
+光看文本片段内部的凝合程度还不够，我们还需要从整体来看它在外部的表现。考虑“被子”和“辈子”这两个片段。我们可以说“买被子”、“盖被子”、“进被子”、“好被子”、“这被子”等等，在“被子”前面加各种字；但“辈子”的用法却非常固定，除了“一辈子”、“这辈子”、“上辈子”、“下辈子”，基本上“辈子”前面不能加别的字了。“辈子”这个文本片段左边可以出现的字太有限，以至于直觉上我们可能会认为，“辈子”并不单独成词，真正成词的其实是“一辈子”、“这辈子”之类的整体。可见，文本片段的自由运用程度也是判断它是否成词的重要标准。如果一个文本片段能够算作一个词的话，它应该能够灵活地出现在各种不同的环境中，具有非常丰富的左邻字集合和右邻字集合。
+
+
+词语的左右邻字要足够丰富--自由程度
+如果一个字符组合可以成词，它应当出现在丰富的语境中，也就是说，拥有丰富的左右邻字。
+
+信息熵是对信息量多少的度量，信息熵越高，表示信息量越丰富、不确定性越大。因此字符组合左右邻字的丰富程度，可以用信息熵(Entropy)来表示：
+
+Entropy⁡(w)=−∑wn∈WNeighborP(wn∣w)log⁡2P(wn∣w)\operatorname{Entropy}(w)=-\sum_{w_{n} \in W_{\text {Neighbor}}} P\left(w_{n} \mid w\right) \log _{2} P\left(w_{n} \mid w\right)
+Entropy(w)=−wn​∈WNeighbor​∑​P(wn​∣w)log2​P(wn​∣w)
+综合考虑
+在实际运用中你会发现，文本片段的凝固程度和自由程度，两种判断标准缺一不可。只看凝固程度的话，程序会找出“巧克”、“俄罗”、“颜六色”、“柴可夫”等实际上是“半个词”的片段；只看自由程度的话，程序则会把“吃了一顿”、“看了一遍”、“睡了一晚”、“去了一趟”中的“了一”提取出来，因为它的左右邻字都太丰富了。
+实现流程
+
+生成候选词：将文本按字符分割后拼接为候选词
+把文本按标点切分成句，然后提取每句话的2元组,3元组,...,k元组作为候选词(一般k&amp;lt;=5就够用了)。比如“专注于自然语言处理技术”这句话产生的2元候选词有：[“专注”、“注于”、“于自”、“自然”、“然语”、“语言”、“言处”、“处理”、“理技”、“技术”]。
+
+将字符两两组合作为候选词
+
+
+候选词得分计算
+我们为每个候选词计算一个得分，表示它成词的可能性。
+
+为了度量左右邻字丰富程度，我们综合考虑候选词左右信息熵(LE,RE)(LE,RE)(LE,RE)的大小、LE与RE差的绝对值(∣LE−RE∣|LE-RE|∣LE−RE∣)，构造统计量如下：
+L(W)=log⁡LE⋅eRE+RE⋅eLE∣LE−RE∣L(W)=\log \frac{L E \cdot e^{R E}+R E \cdot e^{L E}}{|L E-R E|}
+L(W)=log∣LE−RE∣LE⋅eRE+RE⋅eLE​
+由于点间互信息的值会受到候选词长度的影响（候选词越长，互信息取值偏大），我们使用平均互信息(AMI)作为词语内聚程度的度量。AMI的公式如下：
+AMI=1nlog⁡p(W)p(c1)⋯p(cn)A M I=\frac{1}{n} \log \frac{p(W)}{p\left(c_{1}\right) \cdots p\left(c_{n}\right)}
+AMI=n1​logp(c1​)⋯p(cn​)p(W)​
+候选词得分：
+score=AMI+L(W)\text {score}=A M I+L(W)
+score=AMI+L(W)
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://sueying.github.io/post/xin-ci-fa-xian/">Read More ~</a>
+                            </div>
                 </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://sueying.github.io/post/pandas-cheatsheet/">
+                        Pandas cheatsheet
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-08-09</time>
+                    
+                        <a href="https://sueying.github.io/tag/T469JOR2K/" class="post-tag i-tag
+                            i-tag-success">
+            #cheatsheet
+        </a>
                         
-                        <a href="https://sueying.github.io/post/punctuation_mark/">
-                            <span class="post-title gt-c-content-color-first">常用标点符号的英文名字</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-05-12 ·
-                        </time>
-                        
-                            <a href="https://sueying.github.io/tag/wSVz5XiZAX/" class="post-tag">
-                                # tools
-                            </a>
-                        
-                    </div>
                 </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            pandas 时间序列 之日期范围、频率及移动
+https://blog.csdn.net/weixin_38656890/article/details/79782188
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://sueying.github.io/post/pandas-cheatsheet/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://sueying.github.io/post/easy-tools/">
+                        小工具
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-08-09</time>
+                    
+                        <a href="https://sueying.github.io/tag/j2Q-U5oXg/" class="post-tag i-tag
+                            i-tag-banana">
+            #efficiency
+        </a>
                         
-                        <a href="https://sueying.github.io/post/yoon-kim-convolutional-neural-networks-for-sentence-classification-2014/">
-                            <span class="post-title gt-c-content-color-first">Yoon Kim: Convolutional Neural Networks for Sentence Classification, 2014.</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <blockquote>
+                </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            nohup
+nohup python finalweb.py --port=54345 &amp;amp;
+jobs
+kill %1
+
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://sueying.github.io/post/easy-tools/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://sueying.github.io/post/mac_test/">
+                        mac test
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-08-05</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            mac test
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://sueying.github.io/post/mac_test/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://sueying.github.io/post/easy-bert-maskLM/">
+                        五分钟实现一个中文版的Bert Masked LM
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-05-29</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <p>试用一下超好用的HuggingFace Transformer，用它实现一个中文版的Bert Masked LM</p>
+
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://sueying.github.io/post/easy-bert-maskLM/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://sueying.github.io/post/edit-markdown-table-style/">
+                        MarkDown表格格式编辑
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-05-19</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <p>只需要贴一段css在正文中就可以，这段css代码会隐藏，不出现在显示效果中。</p>
+
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://sueying.github.io/post/edit-markdown-table-style/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://sueying.github.io/post/review-leetcode/">
+                        Review Leetcode算法题
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-05-18</time>
+                    
+                        <a href="https://sueying.github.io/tag/_m6zU58ww/" class="post-tag i-tag
+                            i-tag-other_2">
+            #leetcode
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <p>由于算法题通常会刷不止一遍，除了按专题整理算法题之外，我觉得还应该有一个表格来记录：题目描述，解题思路，以及刷题的记录。</p>
+
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://sueying.github.io/post/review-leetcode/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://sueying.github.io/post/mysql-cheatsheet/">
+                        MySQL cheatsheet
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-05-12</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <p>一些 MySQL基本操作，帮助回忆MySQL语法</p>
+
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://sueying.github.io/post/mysql-cheatsheet/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://sueying.github.io/post/punctuation_mark/">
+                        常用标点符号的英文名字
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-05-12</time>
+                    
+                        <a href="https://sueying.github.io/tag/wSVz5XiZAX/" class="post-tag i-tag
+                            i-tag-other_4">
+            #tools
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            
+
+
+中文
+标点符号
+英文
+
+
+
+
+句号
+.
+full stop
+
+
+逗号
+,
+comma
+
+
+冒号
+:
+colon
+
+
+分号
+;
+semicolon
+
+
+问号
+?
+question mark
+
+
+感叹号
+!
+exclamation mark
+
+
+破折号
+--
+dash
+
+
+省略号
+...
+dots / ellipsis
+
+
+左花括号
+{
+open curly / open brace
+
+
+左方括号
+[
+open bracket
+
+
+左圆括号
+(
+open paren
+
+
+右圆括号
+)
+close paren
+
+
+引号
+&amp;quot;
+quotation marks
+
+
+井号
+#
+pound
+
+
+波浪符
+~
+tilde
+
+
+星号，乘号，星
+*
+asterisk, multiply, star
+
+
+斜杠，除号
+/
+slash, divide
+
+
+双斜线，注释符
+//
+slash-slash, comment
+
+
+双线号
+||
+parallel
+
+
+反斜线转义符
+\
+backslash
+
+
+
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://sueying.github.io/post/punctuation_mark/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://sueying.github.io/post/yoon-kim-convolutional-neural-networks-for-sentence-classification-2014/">
+                        Yoon Kim: Convolutional Neural Networks for Sentence Classification, 2014.
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-04-01</time>
+                    
+                        <a href="https://sueying.github.io/tag/Kaih8cx9VX/" class="post-tag i-tag
+                            i-tag-banana">
+            #paper
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <blockquote>
 <p><strong>基于预训word2vec，使用CNN做短文本分类。</strong></p>
 <p>这篇paper在语句分类方面很有名，模型简单效果好。</p>
 </blockquote>
 
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-04-01 ·
-                        </time>
-                        
-                            <a href="https://sueying.github.io/tag/Kaih8cx9VX/" class="post-tag">
-                                # paper
-                            </a>
-                        
-                    </div>
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://sueying.github.io/post/yoon-kim-convolutional-neural-networks-for-sentence-classification-2014/">Read More ~</a>
+                            </div>
                 </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://sueying.github.io/post/hello-gridea/">
-                            <span class="post-title gt-c-content-color-first">Hello Gridea</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://sueying.github.io/post/hello-gridea/">
+                        Hello Gridea
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2018-12-12</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
 ✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
 
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2018-12-12 ·
-                        </time>
-                        
-                    </div>
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://sueying.github.io/post/hello-gridea/">Read More ~</a>
+                            </div>
                 </div>
+            </article>
+            
+                <!-- 翻页 -->
                 
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://sueying.github.io//images/avatar.png?v=1598164496074)">
+        </div>
+        <h1 class="id_card-title">
+            ajslpzcd
+        </h1>
+        <h2 class="id_card-description">
+            
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+    <div class="notice-card i-card ">
+        <div class="notice-title i-card-title">公告</div>
+        <div class="notice-content">
+            2333
+        </div>
+    </div>
+    
+
+                </div>
             </div>
-        
-    </div>
-</div>
-
-        <div class="pagination-container">
-    
-    
-</div>
 
 
-        <div class="site-footer gt-c-content-color-first">
-    <div class="slogan gt-c-content-color-first"></div>
-    <div class="social-container">
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-    </div>
-    <div class="footer-info">
-        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-    </div>
-    <div>
-        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
-                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://sueying.github.io//atom.xml" target="_blank">RSS</a></a>
-    </div>
+
+            <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://sueying.github.io//atom.xml" target="_blank">RSS</a>
 </div>
 
 <script>
@@ -478,6 +1048,12 @@
 </script>
 
     </div>
-</div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
 </body>
+
 </html>
