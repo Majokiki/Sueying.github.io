@@ -7,7 +7,7 @@
 <title>
     ajslpzcd
 </title>
-<link rel="shortcut icon" href="https://sueying.github.io//favicon.ico?v=1598165492745">
+<link rel="shortcut icon" href="https://sueying.github.io//favicon.ico?v=1598175380157">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -27,7 +27,7 @@
     <div class="nav">
         <div class="logo">
             <a href="https://sueying.github.io/">
-                <img class="avatar" src="https://sueying.github.io//images/avatar.png?v=1598165492745" alt="">
+                <img class="avatar" src="https://sueying.github.io//images/avatar.png?v=1598175380157" alt="">
             </a>
             <div class="site-title">
                 <h1>
@@ -115,6 +115,11 @@
                                             许多细碎的东西不容易记住，但可以放进我们的cache里。这个系列是常用工具的CheatSheet，只包含各个工具最主要的功能。持续更新中...
 
 Pandas Cheet Sheet
+Python Cheet Sheet
+
+python容器
+
+
 
 
                                         </div>
@@ -258,88 +263,11 @@ A*（启发式搜索，加速搜索过程）
                     
                             <div class="post-content">
                                 
-                                        <div class="post-content-content">
-                                            Generator
-使用了 yield 的函数被称为生成器（generator）。Generator 和 Iterator二者是可互换的两个概念
-def count(start, step):
-    while True:
-        yield start
-        start += step
+                                    <div class="post-content-abstract">
+                                        <p>Python Cheetsheet Part a，各collection类型的使用</p>
 
-&amp;gt;&amp;gt;&amp;gt; counter = count(10, 2)
-&amp;gt;&amp;gt;&amp;gt; next(counter), next(counter), next(counter)
-(10, 12, 14)
-
-Iterator
-&amp;gt;&amp;gt;&amp;gt; list=[1,2,3,4]
-&amp;gt;&amp;gt;&amp;gt; it = iter(list)
-&amp;gt;&amp;gt;&amp;gt; next(it), next(it), next(it), next(it)
-(1, 2, 3, 4)
-
-&amp;lt;iter&amp;gt; = iter(&amp;lt;collection&amp;gt;)                 # `iter(&amp;lt;iter&amp;gt;)` returns unmodified iterator.
-&amp;lt;el&amp;gt;   = next(&amp;lt;iter&amp;gt; [, default])           # Raises StopIteration or returns &#39;default&#39; on end.
-&amp;lt;iter&amp;gt; = iter(&amp;lt;function&amp;gt;, to_exclusive)     # A sequence of return values until &#39;to_exclusive&#39;.
-&amp;lt;list&amp;gt; = list(&amp;lt;iter&amp;gt;)                       # Returns a list of iterator&#39;s remaining elements.
-
-Dictionary
-索引
-&amp;lt;view&amp;gt; = &amp;lt;dict&amp;gt;.keys()                          # List keys of dict
-&amp;lt;view&amp;gt; = &amp;lt;dict&amp;gt;.values()                        # List values of dict
-&amp;lt;view&amp;gt; = &amp;lt;dict&amp;gt;.items()                         # Key-value tuples of dict
-
-新建
-&amp;lt;dict&amp;gt; = collections.defaultdict(lambda: 1)     # Creates a dict with default value 1.
-&amp;lt;dict&amp;gt; = dict(&amp;lt;collection&amp;gt;)                     # Creates a dict from coll. of key-value pairs.
-&amp;lt;dict&amp;gt; = dict(zip(keys, values))                # Creates a dict from two collections.
-&amp;lt;dict&amp;gt; = dict.fromkeys(keys [, value])          # Creates a dict from collection of keys.
-
-元素操作
-&amp;lt;dict&amp;gt;.update(&amp;lt;dict&amp;gt;)                           # Adds items. Replaces ones with matching keys.
-value = &amp;lt;dict&amp;gt;.pop(key)                         # Removes item or raises KeyError.
-{k for k, v in &amp;lt;dict&amp;gt;.items() if v == value}    # Returns set of keys that point to the value.
-{k: v for k, v in &amp;lt;dict&amp;gt;.items() if k in keys}  # Returns a dictionary, filtered by keys.
-
-计数器
-&amp;gt;&amp;gt;&amp;gt; from collections import Counter
-&amp;gt;&amp;gt;&amp;gt; colors = [&#39;blue&#39;, &#39;blue&#39;, &#39;blue&#39;, &#39;red&#39;, &#39;red&#39;]
-&amp;gt;&amp;gt;&amp;gt; counter = Counter(colors)
-&amp;gt;&amp;gt;&amp;gt; counter[&#39;yellow&#39;] += 1
-Counter({&#39;blue&#39;: 3, &#39;red&#39;: 2, &#39;yellow&#39;: 1})
-&amp;gt;&amp;gt;&amp;gt; counter.most_common()[0]
-(&#39;blue&#39;, 3)
-
-List
-新建
-&amp;lt;list&amp;gt; = &amp;lt;list&amp;gt;[from_inclusive : to_exclusive : ±step_size]
-list_of_chars    = list(&amp;lt;str&amp;gt;)
-
-添加元素
-&amp;lt;list&amp;gt;.append(&amp;lt;el&amp;gt;)            # Or: &amp;lt;list&amp;gt; += [&amp;lt;el&amp;gt;]
-&amp;lt;list&amp;gt;.extend(&amp;lt;collection&amp;gt;)    # Or: &amp;lt;list&amp;gt; += &amp;lt;collection&amp;gt;
-
-排序
-&amp;lt;list&amp;gt;.sort()
-&amp;lt;list&amp;gt;.reverse()
-&amp;lt;list&amp;gt; = sorted(&amp;lt;collection&amp;gt;)
-&amp;lt;iter&amp;gt; = reversed(&amp;lt;list&amp;gt;)
-
-元素操作
-&amp;lt;int&amp;gt; = &amp;lt;list&amp;gt;.count(&amp;lt;el&amp;gt;)     # Returns number of occurrences. Also works on strings.
-index = &amp;lt;list&amp;gt;.index(&amp;lt;el&amp;gt;)     # Returns index of first occurrence or raises ValueError.
-&amp;lt;list&amp;gt;.insert(index, &amp;lt;el&amp;gt;)     # Inserts item at index and moves the rest to the right.
-&amp;lt;el&amp;gt; = &amp;lt;list&amp;gt;.pop([index])     # Removes and returns item at index or from the end.
-&amp;lt;list&amp;gt;.remove(&amp;lt;el&amp;gt;)            # Removes first occurrence of item or raises ValueError.
-&amp;lt;list&amp;gt;.clear()                 # Removes all items. Also works on dictionary and set.
-
-进阶
-sum_of_elements  = sum(&amp;lt;collection&amp;gt;)
-elementwise_sum  = [sum(pair) for pair in zip(list_a, list_b)]
-sorted_by_second = sorted(&amp;lt;collection&amp;gt;, key=lambda el: el[1])
-sorted_by_both   = sorted(&amp;lt;collection&amp;gt;, key=lambda el: (el[1], el[0]))
-
-
-                                        </div>
-                                        
+                                    </div>
+                                    
                                             <a class="btn btn-text" href="https://sueying.github.io/post/python-collections/">Read More ~</a>
                             </div>
                 </div>
@@ -615,7 +543,7 @@ score=AMI+L(W)
                     <time class="post-time">2020-08-09</time>
                     
                         <a href="https://sueying.github.io/tag/T469JOR2K/" class="post-tag i-tag
-                            i-tag-warning">
+                            i-tag-">
             #cheatsheet
         </a>
                         
@@ -624,12 +552,11 @@ score=AMI+L(W)
                     
                             <div class="post-content">
                                 
-                                        <div class="post-content-content">
-                                            pandas 时间序列 之日期范围、频率及移动
-https://blog.csdn.net/weixin_38656890/article/details/79782188
+                                    <div class="post-content-abstract">
+                                        <p>更新至：DataFrame、Series、日期</p>
 
-                                        </div>
-                                        
+                                    </div>
+                                    
                                             <a class="btn btn-text" href="https://sueying.github.io/post/pandas-cheatsheet/">Read More ~</a>
                             </div>
                 </div>
@@ -645,7 +572,7 @@ https://blog.csdn.net/weixin_38656890/article/details/79782188
                     <time class="post-time">2020-08-09</time>
                     
                         <a href="https://sueying.github.io/tag/j2Q-U5oXg/" class="post-tag i-tag
-                            i-tag-warning">
+                            i-tag-other_1">
             #efficiency
         </a>
                         
@@ -654,15 +581,11 @@ https://blog.csdn.net/weixin_38656890/article/details/79782188
                     
                             <div class="post-content">
                                 
-                                        <div class="post-content-content">
-                                            nohup
-nohup python finalweb.py --port=54345 &amp;amp;
-jobs
-kill %1
+                                    <div class="post-content-abstract">
+                                        <p>更新至：nohup</p>
 
-
-                                        </div>
-                                        
+                                    </div>
+                                    
                                             <a class="btn btn-text" href="https://sueying.github.io/post/easy-tools/">Read More ~</a>
                             </div>
                 </div>
@@ -750,7 +673,7 @@ kill %1
                     <time class="post-time">2020-05-18</time>
                     
                         <a href="https://sueying.github.io/tag/_m6zU58ww/" class="post-tag i-tag
-                            i-tag-banana">
+                            i-tag-other_1">
             #leetcode
         </a>
                         
@@ -803,7 +726,7 @@ kill %1
                     <time class="post-time">2020-05-12</time>
                     
                         <a href="https://sueying.github.io/tag/wSVz5XiZAX/" class="post-tag i-tag
-                            i-tag-success">
+                            i-tag-other_1">
             #tools
         </a>
                         
@@ -942,7 +865,7 @@ backslash
                     <time class="post-time">2020-04-01</time>
                     
                         <a href="https://sueying.github.io/tag/Kaih8cx9VX/" class="post-tag i-tag
-                            i-tag-info">
+                            i-tag-warning">
             #paper
         </a>
                         
@@ -1000,7 +923,7 @@ backslash
                     <!-- 个人信息 -->
                     
     <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(https://sueying.github.io//images/avatar.png?v=1598165492745)">
+        <div class="id_card-avatar" style="background-image: url(https://sueying.github.io//images/avatar.png?v=1598175380157)">
         </div>
         <h1 class="id_card-title">
             ajslpzcd

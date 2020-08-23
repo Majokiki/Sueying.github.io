@@ -7,7 +7,7 @@
 <title>
     Pandas cheatsheet | ajslpzcd
 </title>
-<link rel="shortcut icon" href="https://sueying.github.io//favicon.ico?v=1598165492745">
+<link rel="shortcut icon" href="https://sueying.github.io//favicon.ico?v=1598175380157">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -28,7 +28,7 @@
     <div class="nav">
         <div class="logo">
             <a href="https://sueying.github.io/">
-                <img class="avatar" src="https://sueying.github.io//images/avatar.png?v=1598165492745" alt="">
+                <img class="avatar" src="https://sueying.github.io//images/avatar.png?v=1598175380157" alt="">
             </a>
             <div class="site-title">
                 <h1>
@@ -105,15 +105,76 @@
                             <time class="post-time">2020-08-09</time>
                             
                                 <a href="https://sueying.github.io/tag/T469JOR2K/" class="post-tag i-tag
-                            i-tag-info">
+                            i-tag-other_1">
                             #cheatsheet
                         </a>
                                 
                         </div>
                         
                                 <div class="post-content">
-                                    <p>pandas 时间序列 之日期范围、频率及移动<br>
-https://blog.csdn.net/weixin_38656890/article/details/79782188</p>
+                                    <p>更新至：DataFrame、Series、日期</p>
+<!-- more -->
+<h1 id="dataframe">DataFrame：</h1>
+<pre><code class="language-python">
+</code></pre>
+<h1 id="series">Series</h1>
+<pre><code class="language-python">
+</code></pre>
+<h1 id="日期移动范围频率偏移">日期：移动，范围，频率，偏移</h1>
+<pre><code class="language-python">&gt;&gt;&gt; import pandas as pd
+&gt;&gt;&gt; import numpy as np
+&gt;&gt;&gt; date = pd.to_datetime('2020-08-01')
+&gt;&gt;&gt; date
+Timestamp('2020-08-01 00:00:00')
+# 移动
+&gt;&gt;&gt;date = date - pd.DateOffset(years=1)
+&gt;&gt;&gt;date = date - pd.DateOffset(days=7)
+
+# 范围
+&gt;&gt;&gt; index = pd.date_range('2020-08-01', '2020-08-30')
+&gt;&gt;&gt; index
+DatetimeIndex(['2020-08-01', '2020-08-02', '2020-08-03', '2020-08-04',
+               '2020-08-05', '2020-08-06', '2020-08-07', '2020-08-08',
+               '2020-08-09', '2020-08-10'],
+              dtype='datetime64[ns]', freq='D')
+
+&gt;&gt;&gt; pd.date_range(start='2020-08-01',  periods=10)
+DatetimeIndex(['2020-08-01', '2020-08-02', '2020-08-03', '2020-08-04',
+               '2020-08-05', '2020-08-06', '2020-08-07', '2020-08-08',
+               '2020-08-09', '2020-08-10'],
+              dtype='datetime64[ns]', freq='D')
+
+# 频率
+&gt;&gt;&gt; ts = Series(np.random.randn(4),index=pd.date_range('1/1/2000', periods=4, freq='M'))
+&gt;&gt;&gt; ts
+2000-01-31    0.556812
+2000-02-29    0.004086
+2000-03-31   -1.202868
+2000-04-30   -0.337943
+Freq: M, dtype: float64
+
+# 偏移
+&gt;&gt;&gt; ts.shift(2)
+2000-01-31         NaN
+2000-02-29         NaN
+2000-03-31    0.556812
+2000-04-30    0.004086
+Freq: M, dtype: float64
+
+&gt;&gt;&gt; ts/ts.shift(1)-1 
+2000-01-31           NaN
+2000-02-29     -0.992662
+2000-03-31   -295.398535
+2000-04-30     -0.719052
+Freq: M, dtype: float64
+
+&gt;&gt;&gt; ts.shift(2, freq='M')
+2000-03-31    0.556812
+2000-04-30    0.004086
+2000-05-31   -1.202868
+2000-06-30   -0.337943
+Freq: M, dtype: float64
+</code></pre>
 
                                 </div>
                     </article>
@@ -136,32 +197,44 @@ https://blog.csdn.net/weixin_38656890/article/details/79782188</p>
                 <!-- right -->
                 <div id="sidebar" class="main-container-right">
                     
-                                <!-- id-card -->
-                                
-    <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(https://sueying.github.io//images/avatar.png?v=1598165492745)">
-        </div>
-        <h1 class="id_card-title">
-            ajslpzcd
-        </h1>
-        <h2 class="id_card-description">
-            
-        </h2>
-        <!--  -->
-        <div class="id_card-sns">
-            <!-- github -->
-            
-                    <!-- twitter -->
-                    
-                            <!-- weibo -->
-                            
-                                    <!-- facebook -->
-                                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li><a href="#dataframe">DataFrame：</a></li>
+<li><a href="#series">Series</a></li>
+<li><a href="#%E6%97%A5%E6%9C%9F%E7%A7%BB%E5%8A%A8%E8%8C%83%E5%9B%B4%E9%A2%91%E7%8E%87%E5%81%8F%E7%A7%BB">日期：移动，范围，频率，偏移</a></li>
+</ul>
 
         </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
     </div>
     
-                                    
+                            
 
                 </div>
 
