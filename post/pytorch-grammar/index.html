@@ -5,7 +5,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    我选择的机器学习/深度学习系统课程 | ajslpzcd
+    Pytorch 语法练习题 | ajslpzcd
 </title>
 <link rel="shortcut icon" href="https://sueying.github.io//favicon.ico?v=1599358925756">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
@@ -99,65 +99,85 @@
                 <div id="content" class="main-container-left">
                     <article class="post i-card">
                         <h2 class="post-title">
-                            我选择的机器学习/深度学习系统课程
+                            Pytorch 语法练习题
                         </h2>
                         <div class="post-info">
-                            <time class="post-time">2020-05-05</time>
+                            <time class="post-time">2020-08-31</time>
                             
-                                <a href="https://sueying.github.io/tag/BGZGnOfaHn/" class="post-tag i-tag
-                            i-tag-other_2">
-                            #Machine Learning
-                        </a>
-                                
-                                <a href="https://sueying.github.io/tag/eKKnPosPb2/" class="post-tag i-tag
-                            i-tag-error">
-                            #Deep Learning
-                        </a>
-                                
                         </div>
                         
                                 <div class="post-content">
-                                    <h3 id="机器学习">💡机器学习</h3>
-<ol>
-<li>《机器学习基石》/《机器学习技法》--林轩田</li>
-</ol>
-<ul>
-<li>coursera 课程 ：包含视频和作业</li>
-<li>教材： Learning from Data，不长，值得看</li>
-<li><a href="https://www.csie.ntu.edu.tw/~htlin/course/mlfound17fall/">2017秋 slides and assignment</a></li>
-</ul>
-<ol start="2">
-<li>《统计学习方法》--李航</li>
-</ol>
-<ul>
-<li><a href="https://github.com/cpejlgc/li_hang">《统计学习方法》PPT</a></li>
-<li><a href="https://github.com/Dod-o/Statistical-Learning-Method_Code">手写实现《统计学习方法》书中全部代码</a></li>
-</ul>
-<h3 id="深度学习">💡深度学习</h3>
-<ol>
-<li>
-<p>动手学深度学习--李沐<br>
-<a href="https://zh.gluon.ai/index.html">电子书、练习</a><br>
-<a href="https://github.com/ShusenTang/Dive-into-DL-PyTorch">Pytroch版</a></p>
-</li>
-<li>
-<p>《神经网络与深度学习》-- 邱锡鹏：邱老师写的教材</p>
-</li>
-</ol>
-<ul>
-<li><a href="https://nndl.github.io/">PPT、电子书、有课后练习</a></li>
-<li>新加入邱实验室的同学要做的<a href="https://github.com/FudanNLP/nlp-beginner">自然语言处理入门练习</a></li>
-<li>练习参考<a href="https://github.com/Alic-yuan/nlp-beginner-finish">代码</a></li>
-</ul>
-<h3 id="nlp">💡NLP</h3>
-<p><a href="https://www.fast.ai/2019/07/08/fastai-nlp/">Fast.ai course : A Code-First Introduction to Natural Language Processing</a><br>
-michael collins，NLP课程<br>
-<a href="https://github.com/huggingface/transformers">Huggingface Transformers</a></p>
+                                    <p>用Pytorch实现以下的操作</p>
+<!-- more -->
+<h1 id="create-a-random-tensor-of-shape-5x3-in-the-interval-3-7">Create a random tensor of shape 5x3 in the interval [3, 7)</h1>
+<p>3 + torch.rand(5, 3) * (7 - 3)<br>
+​<code>tensor([[4.8155, 4.7534, 6.3560], [3.3288, 6.5717, 6.3192], [3.7567, 3.0715, 5.6321], [5.8696, 5.9009, 4.9031], [3.5128, 4.7134, 5.5808]]) ​</code></p>
+<h1 id="create-a-tensor-with-values-from-a-normal-distribution-mean0-std1">Create a tensor with values from a normal distribution (mean=0, std=1).</h1>
+<p>a = torch.rand(3, 3)<br>
+a.normal_()<br>
+​<code>tensor([[-0.2054, -1.4342, -2.1055], [ 1.5469, -0.7705, 1.9906], [-0.8077, 0.3482, -0.8980]]) ​</code></p>
+<h1 id="retrieve-the-indexes-of-all-the-nonzero-elements-in-the-tensor-torchtensor1-1-1-0-1">Retrieve the indexes of all the nonzero elements in the tensor torch.Tensor([1, 1, 1, 0, 1]).</h1>
+<p>a = torch.Tensor([1, 1, 1, 0, 1])<br>
+torch.nonzero(a)<br>
+​<code>tensor([[0], [1], [2], [4]]) ​</code></p>
+<h1 id="create-a-random-tensor-of-size-31-and-then-horizontally-stack-4-copies-together">Create a random tensor of size (3,1) and then horizontally stack 4 copies together.</h1>
+<p>a = torch.rand(3, 1)<br>
+a.expand(3, 4)<br>
+​​<code>tensor([[0.5178, 0.5178, 0.5178, 0.5178], [0.2181, 0.2181, 0.2181, 0.2181], [0.6165, 0.6165, 0.6165, 0.6165]]) ​</code></p>
+<h1 id="return-the-batch-matrix-matrix-product-of-two-3-dimensional-matrices-atorchrand345-btorchrand354">Return the batch matrix-matrix product of two 3-dimensional matrices (a=torch.rand(3,4,5), b=torch.rand(3,5,4)).</h1>
+<p>a = torch.rand(3, 4, 5)<br>
+b = torch.rand(3, 5, 4)<br>
+torch.bmm(a, b)<br>
+​</p>
+<pre><code>tensor([[[1.4507, 1.2485, 1.3657, 1.5377],
+         [1.3922, 1.0749, 1.4214, 1.3287],
+         [1.6289, 1.2884, 1.0709, 1.3218],
+         [1.0501, 0.8549, 0.6915, 0.9509]],
+
+        [[0.6398, 0.6266, 1.5749, 1.4740],
+         [0.8157, 0.7674, 1.7092, 1.7395],
+         [0.7262, 0.4479, 1.0538, 1.1836],
+         [0.3612, 0.5533, 1.3437, 1.4140]],
+
+        [[1.5326, 0.9550, 0.9859, 0.8811],
+         [2.2768, 1.5613, 1.4351, 1.3243],
+         [0.9585, 0.8616, 0.6620, 0.4361],
+         [0.9373, 0.7459, 0.6769, 0.4929]]])
+</code></pre>
+<h1 id="return-the-batch-matrix-matrix-product-of-a-3d-matrix-and-a-2d-matrix-atorchrand345-btorchrand54">Return the batch matrix-matrix product of a 3D matrix and a 2D matrix (a=torch.rand(3,4,5), b=torch.rand(5,4)).</h1>
+<p>a = torch.rand(3, 4, 5)<br>
+b = torch.rand(5, 4)<br>
+torch.bmm(a, b.unsqueeze(0).expand(a.size(0), * b.size()))<br>
+​```</p>
+<pre><code>tensor([[[1.8884, 1.7598, 1.7936, 1.3056],
+         [1.9379, 1.7159, 1.3237, 1.4542],
+         [2.2535, 2.3201, 1.8004, 0.9877],
+         [1.4368, 1.6570, 1.5413, 0.7036]],
+
+        [[1.5401, 1.1437, 1.0777, 1.1536],
+         [1.7889, 2.0945, 1.3873, 0.5806],
+         [1.2812, 1.2000, 0.8194, 0.8707],
+         [1.7066, 1.5209, 1.3842, 0.9743]],
+
+        [[1.2416, 1.6313, 1.3873, 0.4470],
+         [1.8366, 1.6395, 1.4828, 1.2741],
+         [2.0624, 1.9766, 1.5256, 1.0918],
+         [2.2851, 1.8435, 1.7423, 1.8515]]])
+</code></pre>
 
                                 </div>
                     </article>
                     <!--  -->
                     
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://sueying.github.io/post/python-pickle/">
+                                <h3 class="post-title">
+                                    Python Pickle模块学习
+                                </h3>
+                            </a>
+                        </div>
+                        
                             <div id="disqus_thread"></div>
                             <div id="gitalk-container"></div>
                 </div>
@@ -172,17 +192,12 @@ michael collins，NLP课程<br>
         <div class="toc-title i-card-title">目录</div>
         <div class="toc-content">
             <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0">💡机器学习</a></li>
-<li><a href="#%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0">💡深度学习</a></li>
-<li><a href="#nlp">💡NLP</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li>[Create a random tensor of shape 5x3 in the interval <a href="#create-a-random-tensor-of-shape-5x3-in-the-interval-3-7">3, 7)</a></li>
+<li><a href="#create-a-tensor-with-values-from-a-normal-distribution-mean0-std1">Create a tensor with values from a normal distribution (mean=0, std=1).</a></li>
+<li><a href="#retrieve-the-indexes-of-all-the-nonzero-elements-in-the-tensor-torchtensor1-1-1-0-1">Retrieve the indexes of all the nonzero elements in the tensor torch.Tensor([1, 1, 1, 0, 1]).</a></li>
+<li><a href="#create-a-random-tensor-of-size-31-and-then-horizontally-stack-4-copies-together">Create a random tensor of size (3,1) and then horizontally stack 4 copies together.</a></li>
+<li><a href="#return-the-batch-matrix-matrix-product-of-two-3-dimensional-matrices-atorchrand345-btorchrand354">Return the batch matrix-matrix product of two 3-dimensional matrices (a=torch.rand(3,4,5), b=torch.rand(3,5,4)).</a></li>
+<li><a href="#return-the-batch-matrix-matrix-product-of-a-3d-matrix-and-a-2d-matrix-atorchrand345-btorchrand54">Return the batch matrix-matrix product of a 3D matrix and a 2D matrix (a=torch.rand(3,4,5), b=torch.rand(5,4)).</a></li>
 </ul>
 
         </div>

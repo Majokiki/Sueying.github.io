@@ -2,13 +2,42 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sueying.github.io/</id>
     <title>ajslpzcd</title>
-    <updated>2020-08-23T09:36:22.720Z</updated>
+    <updated>2020-09-06T02:27:56.442Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sueying.github.io/"/>
     <link rel="self" href="https://sueying.github.io/atom.xml"/>
     <logo>https://sueying.github.io/images/avatar.png</logo>
     <icon>https://sueying.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, ajslpzcd</rights>
+    <entry>
+        <title type="html"><![CDATA[Casual Bayesian Network]]></title>
+        <id>https://sueying.github.io/post/casual-bayesian-network/</id>
+        <link href="https://sueying.github.io/post/casual-bayesian-network/">
+        </link>
+        <updated>2020-09-06T02:10:44.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Pytorch 语法练习题]]></title>
+        <id>https://sueying.github.io/post/pytorch-grammar/</id>
+        <link href="https://sueying.github.io/post/pytorch-grammar/">
+        </link>
+        <updated>2020-08-31T02:33:52.000Z</updated>
+        <summary type="html"><![CDATA[<p>用Pytorch实现以下的操作</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>用Pytorch实现以下的操作</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Python Pickle模块学习]]></title>
+        <id>https://sueying.github.io/post/python-pickle/</id>
+        <link href="https://sueying.github.io/post/python-pickle/">
+        </link>
+        <updated>2020-08-31T02:05:20.000Z</updated>
+        <summary type="html"><![CDATA[<p>python中几乎所有的数据类型（列表，字典，集合，类等）都可以用pickle来序列化，pickle序列化后的数据，可读性差，人一般无法识别。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>python中几乎所有的数据类型（列表，字典，集合，类等）都可以用pickle来序列化，pickle序列化后的数据，可读性差，人一般无法识别。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[python容器]]></title>
         <id>https://sueying.github.io/post/python-collections/</id>
@@ -64,35 +93,6 @@
         <summary type="html"><![CDATA[<p>更新至：DataFrame、Series、日期</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>更新至：DataFrame、Series、日期</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[小工具]]></title>
-        <id>https://sueying.github.io/post/easy-tools/</id>
-        <link href="https://sueying.github.io/post/easy-tools/">
-        </link>
-        <updated>2020-08-09T02:17:44.000Z</updated>
-        <summary type="html"><![CDATA[<p>更新至：nohup</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>更新至：nohup</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[mac test]]></title>
-        <id>https://sueying.github.io/post/mac_test/</id>
-        <link href="https://sueying.github.io/post/mac_test/">
-        </link>
-        <updated>2020-08-05T15:36:48.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[五分钟实现一个中文版的Bert Masked LM]]></title>
-        <id>https://sueying.github.io/post/easy-bert-maskLM/</id>
-        <link href="https://sueying.github.io/post/easy-bert-maskLM/">
-        </link>
-        <updated>2020-05-28T21:27:32.000Z</updated>
-        <summary type="html"><![CDATA[<p>试用一下超好用的HuggingFace Transformer，用它实现一个中文版的Bert Masked LM</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>试用一下超好用的HuggingFace Transformer，用它实现一个中文版的Bert Masked LM</p>
 ]]></content>
     </entry>
 </feed>

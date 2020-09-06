@@ -5,7 +5,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    我选择的机器学习/深度学习系统课程 | ajslpzcd
+    Python Pickle模块学习 | ajslpzcd
 </title>
 <link rel="shortcut icon" href="https://sueying.github.io//favicon.ico?v=1599358925756">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
@@ -99,65 +99,55 @@
                 <div id="content" class="main-container-left">
                     <article class="post i-card">
                         <h2 class="post-title">
-                            我选择的机器学习/深度学习系统课程
+                            Python Pickle模块学习
                         </h2>
                         <div class="post-info">
-                            <time class="post-time">2020-05-05</time>
+                            <time class="post-time">2020-08-31</time>
                             
-                                <a href="https://sueying.github.io/tag/BGZGnOfaHn/" class="post-tag i-tag
-                            i-tag-other_2">
-                            #Machine Learning
-                        </a>
-                                
-                                <a href="https://sueying.github.io/tag/eKKnPosPb2/" class="post-tag i-tag
-                            i-tag-error">
-                            #Deep Learning
-                        </a>
-                                
                         </div>
                         
                                 <div class="post-content">
-                                    <h3 id="机器学习">💡机器学习</h3>
-<ol>
-<li>《机器学习基石》/《机器学习技法》--林轩田</li>
-</ol>
-<ul>
-<li>coursera 课程 ：包含视频和作业</li>
-<li>教材： Learning from Data，不长，值得看</li>
-<li><a href="https://www.csie.ntu.edu.tw/~htlin/course/mlfound17fall/">2017秋 slides and assignment</a></li>
-</ul>
-<ol start="2">
-<li>《统计学习方法》--李航</li>
-</ol>
-<ul>
-<li><a href="https://github.com/cpejlgc/li_hang">《统计学习方法》PPT</a></li>
-<li><a href="https://github.com/Dod-o/Statistical-Learning-Method_Code">手写实现《统计学习方法》书中全部代码</a></li>
-</ul>
-<h3 id="深度学习">💡深度学习</h3>
-<ol>
-<li>
-<p>动手学深度学习--李沐<br>
-<a href="https://zh.gluon.ai/index.html">电子书、练习</a><br>
-<a href="https://github.com/ShusenTang/Dive-into-DL-PyTorch">Pytroch版</a></p>
-</li>
-<li>
-<p>《神经网络与深度学习》-- 邱锡鹏：邱老师写的教材</p>
-</li>
-</ol>
-<ul>
-<li><a href="https://nndl.github.io/">PPT、电子书、有课后练习</a></li>
-<li>新加入邱实验室的同学要做的<a href="https://github.com/FudanNLP/nlp-beginner">自然语言处理入门练习</a></li>
-<li>练习参考<a href="https://github.com/Alic-yuan/nlp-beginner-finish">代码</a></li>
-</ul>
-<h3 id="nlp">💡NLP</h3>
-<p><a href="https://www.fast.ai/2019/07/08/fastai-nlp/">Fast.ai course : A Code-First Introduction to Natural Language Processing</a><br>
-michael collins，NLP课程<br>
-<a href="https://github.com/huggingface/transformers">Huggingface Transformers</a></p>
+                                    <p>python中几乎所有的数据类型（列表，字典，集合，类等）都可以用pickle来序列化，pickle序列化后的数据，可读性差，人一般无法识别。</p>
+<!-- more -->
+<p><code>pickle.dump(obj, file[, protocol])</code></p>
+<blockquote>
+<p>序列化对象，并将结果数据流写入到文件对象中。<br>
+参数protocol是序列化模式，默认值为0，表示以文本的形式序列化。<br>
+protocol的值还可以是1或2，表示以二进制的形式序列化。</p>
+</blockquote>
+<h1 id="先看一个简单的示例">先看一个简单的示例</h1>
+<p><code>pickle.dump</code>示例</p>
+<pre><code class="language-python">import keras
+import pickle
+
+# This is a hyperparameter, experiment with different values for your dataset
+age_vocab_size = 10 
+token_age = keras.preprocessing.text.Tokenizer(num_words=age_vocab_size, char_level=False, filters='')
+# only fit on train
+token_age.fit_on_texts(age_train) 
+
+# save tokenizer
+with open('age.tokenizer', 'wb') as handle:
+    pickle.dump(token_age, handle, protocol=2)
+</code></pre>
+<p><code>pickle.load</code>示例</p>
+<pre><code class="language-python">with open('age.tokenizer', &quot;rb&quot;) as handle:
+     tokem_age = pickle.load(handle, encoding='iso-8859-1')
+</code></pre>
 
                                 </div>
                     </article>
                     <!--  -->
                     
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://sueying.github.io/post/python-collections/">
+                                <h3 class="post-title">
+                                    python容器
+                                </h3>
+                            </a>
+                        </div>
+                        
                             <div id="disqus_thread"></div>
                             <div id="gitalk-container"></div>
                 </div>
@@ -172,17 +162,7 @@ michael collins，NLP课程<br>
         <div class="toc-title i-card-title">目录</div>
         <div class="toc-content">
             <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0">💡机器学习</a></li>
-<li><a href="#%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0">💡深度学习</a></li>
-<li><a href="#nlp">💡NLP</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a href="#%E5%85%88%E7%9C%8B%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E7%A4%BA%E4%BE%8B">先看一个简单的示例</a></li>
 </ul>
 
         </div>
